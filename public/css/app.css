@@ -1,0 +1,20 @@
+.list-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sort_form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.space {
+    margin: 30px 0px;
+}
+
+.button_comeback {
+    margin-top: 10px;
+    float: right;
+}
