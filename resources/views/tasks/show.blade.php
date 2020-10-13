@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.master')
 @section('content')
     <h1 class="text-center my-5">{{ $task->name }}</h1>
     <div class="row justify-content-center">

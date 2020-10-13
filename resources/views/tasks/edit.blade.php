@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.master')
 @section('content')
     <h1 class="text-center my-5">Edit Todos</h1>
 

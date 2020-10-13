@@ -1,4 +1,4 @@
-@extends ('layouts.app')
+@extends ('layouts.master')
 @section('title')
     Todos List
 @endsection
@@ -15,7 +15,7 @@
         <!-- Display Validation Errors -->
         @include('common.errors')
 
-        <div class="col-md-10">
+        <div class="col-md-12">
             <div class="card card-default">
                 <div class="card-header">
                     New Task
@@ -50,6 +50,7 @@
                             <th scope="col">Description</th>
                             <th scope="col">Status</th>
                             <th scope="col">Tags</th>
+                            <th scope="col">By</th>
                             <th scope="col">Action</th>
                         </tr>
                         </thead>
@@ -65,7 +66,8 @@
                                     <span class="badge badge-secondary">{{ $tag->name }}</span>
                                 @endforeach
                             </td>
-                            <td class="sort_form">
+                            <td>{{Auth::user()->name}}</td>
+                            <td class="d-flex justify-content-between">
                                 <a href="/task/show/{{ $item->id }}" class="btn btn-primary">Show</a>
                                 <a href="/task/edit/{{ $item->id }}" class="btn btn-warning">Edit</a>
                                 <form action="/task/delete/{{ $item->id }}" method="POST">
