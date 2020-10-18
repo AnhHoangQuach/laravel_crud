@@ -30,7 +30,8 @@ Route::post('/task/update/{task}', 'TaskController@updatePost')->middleware('che
 
 Route::delete('/task/delete/{task}', 'TaskController@deletePost')->middleware('checkAuth');
 
-
+Route::get('/email', 'EmailController@create');
+Route::post('/email', 'EmailController@sendEmail')->name('send.email');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

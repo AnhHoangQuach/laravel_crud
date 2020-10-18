@@ -65,7 +65,9 @@
                                 {{ __('Logout') }}
                             </a>
                         </form>
+                        <a class="dropdown-item" href="/email">{{ __('Send message') }}</a>
                     </div>
+
                 </li>
             @endif
         </ul>
